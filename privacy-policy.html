@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Abacus Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles - Consistent with main site */
+        :root {
+            --primary-blue: #005662; /* Deep Teal/Sapphire Blue */
+            --accent-gold: #FFD700; /* Gold */
+            --accent-orange: #FFA500; /* Bright Orange */
+            --light-gray: #f4f7f6;
+            --dark-gray: #333;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--light-gray);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue);
+            margin-bottom: 0.8em;
+        }
+
+        h1 { font-size: 2.8em; font-weight: 700; text-align: center; margin-bottom: 40px;}
+        h2 { font-size: 2.2em; font-weight: 700; }
+        h3 { font-size: 1.8em; font-weight: 600; }
+        p { font-size: 1.1em; margin-bottom: 1em;}
+
+        .container {
+            max-width: 900px; /* Slightly narrower for policy text */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header - Consistent with main site */
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-auth .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Privacy Policy Content */
+        .policy-content {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .policy-content h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .policy-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .policy-content p {
+            margin-bottom: 1em;
+        }
+
+        .policy-content ul {
+            list-style: disc;
+            padding-left: 25px;
+            margin-bottom: 1em;
+        }
+
+        .policy-content ul li {
+            margin-bottom: 0.5em;
+        }
+
+        /* Footer - Consistent with main site */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .footer-column h4 {
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.8em;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .nav-auth {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                font-size: 2em;
+                color: var(--primary-blue);
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            h1 { font-size: 2.2em; }
+            .policy-content { padding: 20px; }
+            .policy-content h2 { font-size: 1.5em; }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Hamburger Menu Icon */
+        .hamburger {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#x1F9EE;</span> Abacus Academy
+            </a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="index.html#mock-tests">Mock Tests</a></li>
+                    <li><a href="index.html#testimonials">Success Stories</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-auth">
+                <a href="#" class="btn btn-secondary">Login</a>
+                <a href="#" class="btn btn-primary">Register</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="policy-section">
+            <div class="container">
+                <h1>🛡️ Privacy Policy for Abacus Academy</h1>
+                <div class="policy-content">
+                    <p><strong>Effective Date:</strong> [16/07/2025]</p>
+                    <p>Abacus Academy ("we", "our", or "us") respects your privacy and is committed to protecting your personal data. This Privacy Policy describes how we collect, use, and share your information when you use our mobile application: Abacus Academy – MCQ Practice & Mock Tests for SLST, NET, SET, BPSC.</p>
+
+                    <h2>🔍 1. Information We Collect</h2>
+                    <p>We may collect the following types of information:</p>
+                    <p>a) Personal Information (only when provided by you):</p>
+                    <ul>
+                        <li>Name, email address, phone number (for account registration or support)</li>
+                        <li>Login information if using Google Sign-In</li>
+                    </ul>
+                    <p>b) Usage Information:</p>
+                    <ul>
+                        <li>Your test attempts, scores, progress, and time spent</li>
+                        <li>Device type, operating system, and crash logs (for app performance and debugging)</li>
+                    </ul>
+                    <p>c) No sensitive personal data is collected.</p>
+
+                    <h2>🛠️ 2. How We Use Your Information</h2>
+                    <p>We use your information to:</p>
+                    <ul>
+                        <li>Provide access to chapter-wise tests and mock exams</li>
+                        <li>Store and display your results and progress</li>
+                        <li>Improve the app features and performance</li>
+                        <li>Send occasional updates or alerts (only if opted in)</li>
+                    </ul>
+
+                    <h2>🚫 3. Data Sharing and Disclosure</h2>
+                    <p>We <strong>do not sell, trade, or rent</strong> your personal information to any third parties.</p>
+                    <p>We may share data only with:</p>
+                    <ul>
+                        <li>Google Firebase (for authentication and real-time database)</li>
+                        <li>Analytics tools (e.g., Google Analytics for usage insights)</li>
+                    </ul>
+
+                    <h2>🔐 4. Data Security</h2>
+                    <p>We implement strong security measures to protect your data from unauthorized access. Data is stored in secure cloud services (e.g., Firebase), and access is limited to authorized personnel only.</p>
+
+                    <h2>👤 5. Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Request access to your data</li>
+                        <li>Ask us to delete your data at any time</li>
+                        <li>Opt out of notifications or communications</li>
+                    </ul>
+                    <p>To make a request, contact us at: [Your Support Email]</p>
+
+                    <h2>👶 6. Children’s Privacy</h2>
+                    <p>Our app is not intended for children under the age of 13. We do not knowingly collect personal data from children. If you believe your child has provided personal information, please contact us immediately.</p>
+
+                    <h2>🌐 7. Third-Party Links</h2>
+                    <p>Our app may contain links to third-party websites or tools. We are not responsible for the content or privacy practices of those sites.</p>
+
+                    <h2>🔄 8. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. We encourage you to review this page periodically. Changes are effective immediately upon posting.</p>
+
+                    <h2>📩 9. Contact Us</h2>
+                    <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+                    <p>📧 Email: ashismahata204@gmail.com</p>
+                    <p>🌐 Website: www.abacusacadmy.blogspot.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Abacus Academy</h4>
+                    <p>Your trusted partner for competitive exam success. Empowering futures through quality education.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#courses">Courses</a></li>
+                        <li><a href="index.html#mock-tests">Mock Tests</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li> <!-- Added link -->
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@abacusacademy.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Address: [Your Academy Address Here], India</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">&#x1F4F1;</a>
+                        <a href="#" target="_blank">&#x1F4F1;</a>
+                        <a href="#" target="_blank">&#x1F4F1;</a>
+                        <a href="#" target="_blank">&#x1F4F1;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Abacus Academy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!navLinks.contains(event.target) && !hamburger.contains(event.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

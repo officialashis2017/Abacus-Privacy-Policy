@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Abacus Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-blue: #005662; /* Deep Teal/Sapphire Blue */
+            --accent-gold: #FFD700; /* Gold */
+            --accent-orange: #FFA500; /* Bright Orange */
+            --light-gray: #f4f7f6;
+            --dark-gray: #333;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue);
+            margin-bottom: 0.8em;
+        }
+
+        h1 { font-size: 2.8em; font-weight: 700; }
+        h2 { font-size: 2.2em; font-weight: 700; }
+        h3 { font-size: 1.8em; font-weight: 600; }
+        p { font-size: 1.1em; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .header-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #007987 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .header-section h1 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .header-section p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            border-left: 4px solid var(--primary-blue);
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            color: var(--primary-blue);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+        }
+
+        .section ul, .section ol {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+        }
+
+        .important {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-orange);
+            margin: 30px 0;
+        }
+
+        .important h3 {
+            color: var(--accent-orange);
+            margin-top: 0;
+        }
+
+        .important ul {
+            margin-bottom: 0;
+        }
+
+        .email-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-bottom {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                font-size: 2em;
+                color: var(--primary-blue);
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            .header-section h1 {
+                font-size: 2.2em;
+            }
+
+            .header-section p {
+                font-size: 1.1em;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+
+        /* Hamburger Menu Icon */
+        .hamburger {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#x1F9EE;</span> Abacus Academy
+            </a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="index.html#mock-tests">Mock Tests</a></li>
+                    <li><a href="index.html#testimonials">Success Stories</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="delete-account.html">Delete Account</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="header-section">
+                <h1>Delete Account - Abacus Academy</h1>
+                <p>Request to delete your account and associated data</p>
+            </div>
+
+            <div class="section">
+                <h2>How to Request Account Deletion</h2>
+                <p>To request deletion of your account and associated data, please follow these steps:</p>
+                <ol>
+                    <li><strong>Email us</strong> at: <a href="mailto:abacusacademymail@gmail.com" class="email-link">abacusacademymail@gmail.com</a></li>
+                    <li><strong>Subject line</strong>: "Delete My Account - [Your Name]"</li>
+                    <li><strong>Include in email</strong>:
+                        <ul>
+                            <li>Your full name as registered in the app</li>
+                            <li>Your country, state, and district</li>
+                            <li>Confirmation that you want to delete your account</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>What Data Will Be Deleted</h2>
+                <p>Upon account deletion, the following data will be permanently removed:</p>
+                <ul>
+                    <li>Your name and location information</li>
+                    <li>All test results and progress data</li>
+                    <li>Leaderboard entries and rankings</li>
+                    <li>App preferences and settings</li>
+                    <li>Device identification data</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Data Retention Period</h2>
+                <p>We will process your deletion request within <strong>30 days</strong> of receiving it. After deletion:</p>
+                <ul>
+                    <li>Local app data will be removed immediately</li>
+                    <li>Server-side data (Google Sheets) will be deleted within 30 days</li>
+                    <li>No personal data will be retained beyond this period</li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <h3>Important Notes</h3>
+                <ul>
+                    <li>Account deletion is <strong>permanent and cannot be undone</strong></li>
+                    <li>You will lose access to all your progress and test results</li>
+                    <li>If you reinstall the app, you will need to start fresh</li>
+                    <li>For questions about this process, contact us at the email above</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Alternative: Clear App Data</h2>
+                <p>If you prefer to clear your data without contacting us:</p>
+                <ol>
+                    <li>Go to your device's <strong>Settings</strong></li>
+                    <li>Find <strong>Apps</strong> or <strong>Application Manager</strong></li>
+                    <li>Select <strong>Abacus Academy</strong></li>
+                    <li>Tap <strong>Storage</strong></li>
+                    <li>Tap <strong>Clear Data</strong> and <strong>Clear Cache</strong></li>
+                </ol>
+                <p><em>Note: This only clears local data. Server-side data will remain until manually deleted.</em></p>
+            </div>
+
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2025 Abacus Academy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close nav menu when clicking outside on mobile
+        document.addEventListener('click', (event) => {
+            if (!navLinks.contains(event.target) && !hamburger.contains(event.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

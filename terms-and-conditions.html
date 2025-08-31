@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Abacus Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles - Consistent with main site */
+        :root {
+            --primary-blue: #005662;
+            --accent-gold: #FFD700;
+            --accent-orange: #FFA500;
+            --light-gray: #f4f7f6;
+            --dark-gray: #333;
+            --text-color: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--light-gray);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue);
+            margin-bottom: 0.8em;
+        }
+
+        h1 { font-size: 2.8em; font-weight: 700; text-align: center; margin-bottom: 40px;}
+        h2 { font-size: 1.8em; font-weight: 700; }
+        h3 { font-size: 1.5em; font-weight: 600; }
+        h4 { font-size: 1.3em; font-weight: 600; }
+        p { font-size: 1.1em; margin-bottom: 1em;}
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-auth .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Terms Content */
+        .terms-content {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .terms-content h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 10px;
+        }
+
+        .terms-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .terms-content h3 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .terms-content h4 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-gray);
+        }
+
+        .terms-content ul {
+            list-style: disc;
+            padding-left: 25px;
+            margin-bottom: 1em;
+        }
+
+        .terms-content ul li {
+            margin-bottom: 0.5em;
+        }
+
+        .terms-meta {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .terms-meta p {
+            margin: 5px 0;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .highlight-section {
+            background-color: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: var(--primary-blue);
+        }
+
+        .toc ol {
+            columns: 2;
+            column-gap: 30px;
+        }
+
+        .toc li {
+            margin-bottom: 5px;
+            break-inside: avoid;
+        }
+
+        .toc a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links li {
+                margin: 5px 0;
+            }
+
+            .nav-auth {
+                margin-top: 15px;
+            }
+
+            .nav-auth .btn {
+                margin: 5px;
+            }
+
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.6em; }
+            h3 { font-size: 1.3em; }
+
+            .terms-content {
+                padding: 20px;
+                margin-top: 30px;
+            }
+
+            .toc ol {
+                columns: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.4em; }
+            h3 { font-size: 1.2em; }
+
+            .terms-content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🧮</span>
+                Abacus Academy
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                <li><a href="delete-account.html">Delete Account</a></li>
+            </ul>
+            <div class="nav-auth">
+                <a href="#" class="btn btn-secondary">Contact Us</a>
+                <a href="#" class="btn btn-primary">Get App</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="terms-content">
+            <h1>Terms of Service</h1>
+            
+            <div class="terms-meta">
+                <p><strong>Abacus Academy - Educational App</strong></p>
+                <p><strong>Effective Date:</strong> August 1, 2025</p>
+                <p><strong>Last Updated:</strong> September 1, 2025</p>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ol>
+                    <li><a href="#acceptance">Acceptance of Terms</a></li>
+                    <li><a href="#service-description">Description of Service</a></li>
+                    <li><a href="#user-accounts">User Accounts and Registration</a></li>
+                    <li><a href="#acceptable-use">Acceptable Use Policy</a></li>
+                    <li><a href="#content-ip">Content and Intellectual Property</a></li>
+                    <li><a href="#privacy">Privacy and Data Protection</a></li>
+                    <li><a href="#payments">Subscription and Payments</a></li>
+                    <li><a href="#disclaimers">Disclaimers and Warranties</a></li>
+                    <li><a href="#liability">Limitation of Liability</a></li>
+                    <li><a href="#indemnification">Indemnification</a></li>
+                    <li><a href="#termination">Termination</a></li>
+                    <li><a href="#updates">Updates and Modifications</a></li>
+                    <li><a href="#governing-law">Governing Law and Dispute Resolution</a></li>
+                    <li><a href="#accessibility">Accessibility and Compliance</a></li>
+                    <li><a href="#support">Support and Contact Information</a></li>
+                    <li><a href="#miscellaneous">Miscellaneous</a></li>
+                    <li><a href="#acknowledgment">Acknowledgment</a></li>
+                </ol>
+            </div>
+
+            <hr>
+
+            <section id="acceptance">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By downloading, installing, accessing, or using the Abacus Academy mobile application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+                <p>These Terms constitute a legally binding agreement between you ("User," "you," or "your") and Abacus Academy ("we," "us," or "our").</p>
+            </section>
+
+            <section id="service-description">
+                <h2>2. Description of Service</h2>
+                
+                <h3>2.1 Educational Platform</h3>
+                <p>Abacus Academy is a comprehensive educational mobile application designed for competitive exam preparation, including but not limited to:</p>
+                <ul>
+                    <li>SLST (State Level Selection Test)</li>
+                    <li>CTET (Central Teacher Eligibility Test)</li>
+                    <li>TET (Teacher Eligibility Test)</li>
+                    <li>NET (National Eligibility Test)</li>
+                    <li>SET (State Eligibility Test)</li>
+                    <li>GATE (Graduate Aptitude Test in Engineering)</li>
+                </ul>
+
+                <h3>2.2 Core Features</h3>
+                <p>The App provides:</p>
+                <ul>
+                    <li><strong>Educational Content:</strong> Subject-wise and topic-wise practice questions</li>
+                    <li><strong>Mock Tests:</strong> Full-length practice examinations</li>
+                    <li><strong>Progress Tracking:</strong> Detailed analytics and performance reports</li>
+                    <li><strong>Leaderboard System:</strong> Global and topic-wise rankings</li>
+                    <li><strong>Study Materials:</strong> Syllabus, notes, and reference materials</li>
+                    <li><strong>AI Assistant:</strong> Study guidance and question assistance</li>
+                    <li><strong>Job Notifications:</strong> Relevant employment opportunities</li>
+                    <li><strong>User Management:</strong> Profile management and data export capabilities</li>
+                </ul>
+
+                <h3>2.3 Authentication Requirement</h3>
+                <p>Access to the App requires mandatory Google Sign-In authentication. Users must maintain a valid Google account to use the services.</p>
+            </section>
+
+            <section id="user-accounts">
+                <h2>3. User Accounts and Registration</h2>
+                
+                <h3>3.1 Account Creation</h3>
+                <ul>
+                    <li>Users must sign in using their Google account</li>
+                    <li>Users must provide accurate and complete information</li>
+                    <li>Users are responsible for maintaining account security</li>
+                    <li>One account per user; duplicate accounts are prohibited</li>
+                </ul>
+
+                <h3>3.2 Account Responsibilities</h3>
+                <ul>
+                    <li>Keep login credentials secure and confidential</li>
+                    <li>Notify us immediately of any unauthorized account access</li>
+                    <li>Accept responsibility for all activities under your account</li>
+                    <li>Provide accurate personal information when required</li>
+                </ul>
+
+                <h3>3.3 Account Termination</h3>
+                <p>We reserve the right to suspend or terminate accounts that:</p>
+                <ul>
+                    <li>Violate these Terms of Service</li>
+                    <li>Engage in fraudulent or illegal activities</li>
+                    <li>Create multiple accounts to manipulate rankings</li>
+                    <li>Abuse or misuse the App's features</li>
+                </ul>
+            </section>
+
+            <section id="acceptable-use">
+                <h2>4. Acceptable Use Policy</h2>
+                
+                <h3>4.1 Permitted Uses</h3>
+                <p>You may use the App to:</p>
+                <ul>
+                    <li>Access educational content for legitimate study purposes</li>
+                    <li>Take practice tests and track your progress</li>
+                    <li>Participate in leaderboards and rankings</li>
+                    <li>Export your personal data and progress reports</li>
+                    <li>Receive job notifications and career guidance</li>
+                </ul>
+
+                <h3>4.2 Prohibited Activities</h3>
+                <p>You agree NOT to:</p>
+                <ul>
+                    <li><strong>Academic Misconduct:</strong> Share, copy, or distribute test questions or answers</li>
+                    <li><strong>System Abuse:</strong> Attempt to hack, reverse engineer, or exploit the App</li>
+                    <li><strong>Fraudulent Behavior:</strong> Create fake accounts or manipulate test results</li>
+                    <li><strong>Content Violation:</strong> Upload harmful, illegal, or inappropriate content</li>
+                    <li><strong>Commercial Misuse:</strong> Use the App for unauthorized commercial purposes</li>
+                    <li><strong>Data Mining:</strong> Extract or scrape content without permission</li>
+                    <li><strong>Interference:</strong> Disrupt other users' experience or system functionality</li>
+                </ul>
+
+                <h3>4.3 Intellectual Property Respect</h3>
+                <ul>
+                    <li>Respect all copyrights, trademarks, and intellectual property rights</li>
+                    <li>Do not reproduce or distribute proprietary content</li>
+                    <li>Use content only for personal educational purposes</li>
+                </ul>
+            </section>
+
+            <section id="content-ip">
+                <h2>5. Content and Intellectual Property</h2>
+                
+                <h3>5.1 Our Content</h3>
+                <p>All educational materials, questions, explanations, interface designs, and other content provided through the App are owned by Abacus Academy or our content partners and are protected by:</p>
+                <ul>
+                    <li>Copyright laws</li>
+                    <li>Trademark laws</li>
+                    <li>Other intellectual property rights</li>
+                </ul>
+
+                <h3>5.2 License to Use</h3>
+                <p>We grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+                <ul>
+                    <li>Access and use the App for personal educational purposes</li>
+                    <li>Download content for offline study (where permitted)</li>
+                    <li>Generate personal progress reports and certificates</li>
+                </ul>
+
+                <h3>5.3 User-Generated Content</h3>
+                <p>Any content you submit, upload, or share through the App:</p>
+                <ul>
+                    <li>Remains your property</li>
+                    <li>Grants us a license to use for App operation and improvement</li>
+                    <li>Must comply with our content guidelines</li>
+                    <li>Should not violate any third-party rights</li>
+                </ul>
+
+                <h3>5.4 Third-Party Content</h3>
+                <ul>
+                    <li>Some content may be sourced from third-party educational providers</li>
+                    <li>Third-party content is subject to respective owners' terms</li>
+                    <li>We are not responsible for third-party content accuracy or availability</li>
+                </ul>
+            </section>
+
+            <section id="privacy">
+                <h2>6. Privacy and Data Protection</h2>
+                
+                <h3>6.1 Data Collection</h3>
+                <p>We collect and process personal data as described in our <a href="privacy-policy.html">Privacy Policy</a>, including:</p>
+                <ul>
+                    <li>Google account information (name, email, profile picture)</li>
+                    <li>Study progress and performance data</li>
+                    <li>App usage analytics</li>
+                    <li>Device and technical information</li>
+                </ul>
+
+                <h3>6.2 Data Use</h3>
+                <p>Your data is used to:</p>
+                <ul>
+                    <li>Provide personalized educational experience</li>
+                    <li>Track progress and generate analytics</li>
+                    <li>Maintain leaderboards and rankings</li>
+                    <li>Send relevant notifications and updates</li>
+                    <li>Improve App functionality and content</li>
+                </ul>
+
+                <h3>6.3 Data Security</h3>
+                <p>We implement appropriate security measures to protect your personal information, but cannot guarantee absolute security due to the nature of internet communications.</p>
+
+                <h3>6.4 Data Retention</h3>
+                <ul>
+                    <li>Account data is retained while your account is active</li>
+                    <li>You may request data deletion upon account termination</li>
+                    <li>Some data may be retained for legal or operational requirements</li>
+                </ul>
+            </section>
+
+            <section id="payments">
+                <h2>7. Subscription and Payments</h2>
+                
+                <h3>7.1 Free Services</h3>
+                <p>The basic version of Abacus Academy is provided free of charge, supported by advertising revenue.</p>
+
+                <h3>7.2 Premium Features</h3>
+                <p>Premium features, if available, may include:</p>
+                <ul>
+                    <li>Ad-free experience</li>
+                    <li>Additional practice tests</li>
+                    <li>Advanced analytics</li>
+                    <li>Priority customer support</li>
+                </ul>
+
+                <h3>7.3 Payment Terms</h3>
+                <p>For premium subscriptions:</p>
+                <ul>
+                    <li>Payment is processed through Google Play Store or Apple App Store</li>
+                    <li>Subscriptions auto-renew unless cancelled</li>
+                    <li>Refund policies follow platform guidelines</li>
+                    <li>Price changes will be communicated in advance</li>
+                </ul>
+
+                <h3>7.4 Advertising</h3>
+                <p>Free users will see advertisements that help support the App. These ads are:</p>
+                <ul>
+                    <li>Relevant to educational content where possible</li>
+                    <li>Compliant with advertising standards</li>
+                    <li>Not excessive or disruptive to learning</li>
+                </ul>
+            </section>
+
+            <section id="disclaimers">
+                <h2>8. Disclaimers and Warranties</h2>
+                
+                <h3>8.1 Educational Purpose</h3>
+                <ul>
+                    <li>The App is designed for educational and practice purposes only</li>
+                    <li>Content accuracy is maintained but not guaranteed</li>
+                    <li>We are not responsible for exam results or career outcomes</li>
+                    <li>Users should verify information with official sources</li>
+                </ul>
+
+                <h3>8.2 Service Availability</h3>
+                <ul>
+                    <li>The App is provided "as is" without warranties</li>
+                    <li>We do not guarantee uninterrupted service availability</li>
+                    <li>Maintenance and updates may temporarily affect access</li>
+                    <li>Technical issues may occasionally impact functionality</li>
+                </ul>
+
+                <h3>8.3 Third-Party Services</h3>
+                <ul>
+                    <li>Integration with Google services is subject to Google's terms</li>
+                    <li>Firebase and other third-party services have their own terms</li>
+                    <li>We are not responsible for third-party service interruptions</li>
+                </ul>
+
+                <div class="highlight-section">
+                    <h3>8.4 No Warranty</h3>
+                    <p><strong>THE APP IS PROVIDED WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</strong></p>
+                </div>
+            </section>
+
+            <section id="liability">
+                <h2>9. Limitation of Liability</h2>
+                
+                <div class="highlight-section">
+                    <h3>9.1 Liability Limitations</h3>
+                    <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+                    <ul>
+                        <li>We shall not be liable for any indirect, incidental, or consequential damages</li>
+                        <li>Our total liability shall not exceed the amount paid by you (if any) for the services</li>
+                        <li>We are not liable for exam failures, missed opportunities, or career impacts</li>
+                        <li>Force majeure events are excluded from liability</li>
+                    </ul>
+                </div>
+
+                <h3>9.2 User Responsibility</h3>
+                <p>Users are responsible for:</p>
+                <ul>
+                    <li>Their own study preparation and exam performance</li>
+                    <li>Verifying information accuracy with official sources</li>
+                    <li>Backing up important personal data</li>
+                    <li>Complying with exam regulations and academic integrity</li>
+                </ul>
+            </section>
+
+            <section id="indemnification">
+                <h2>10. Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless Abacus Academy, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses arising out of or in any way connected with:</p>
+                <ul>
+                    <li>Your use of the App</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any rights of another person or entity</li>
+                    <li>Your User-generated content</li>
+                </ul>
+            </section>
+
+            <section id="termination">
+                <h2>11. Termination</h2>
+                
+                <h3>11.1 Termination by You</h3>
+                <p>You may terminate your account at any time by:</p>
+                <ul>
+                    <li>Using the account deletion feature in the App</li>
+                    <li>Contacting our support team</li>
+                    <li>Uninstalling the App (though account data may remain)</li>
+                </ul>
+
+                <h3>11.2 Termination by Us</h3>
+                <p>We may terminate or suspend your account immediately if:</p>
+                <ul>
+                    <li>You violate these Terms of Service</li>
+                    <li>Your account is inactive for an extended period</li>
+                    <li>Legal requirements mandate account closure</li>
+                    <li>The App is discontinued</li>
+                </ul>
+
+                <h3>11.3 Effect of Termination</h3>
+                <p>Upon termination:</p>
+                <ul>
+                    <li>Your access to the App will cease immediately</li>
+                    <li>Your data may be deleted after a reasonable period</li>
+                    <li>These Terms will continue to apply to past use</li>
+                    <li>Accrued obligations and liabilities remain in effect</li>
+                </ul>
+            </section>
+
+            <section id="updates">
+                <h2>12. Updates and Modifications</h2>
+                
+                <h3>12.1 App Updates</h3>
+                <ul>
+                    <li>The App may be updated periodically for improvements and security</li>
+                    <li>Some updates may be mandatory for continued access</li>
+                    <li>New features may be added or existing features modified</li>
+                    <li>Compatibility with older devices is not guaranteed</li>
+                </ul>
+
+                <h3>12.2 Terms Updates</h3>
+                <ul>
+                    <li>These Terms may be updated from time to time</li>
+                    <li>Material changes will be communicated through the App or email</li>
+                    <li>Continued use after changes constitutes acceptance</li>
+                    <li>Previous versions will be archived for reference</li>
+                </ul>
+
+                <h3>12.3 Notification of Changes</h3>
+                <p>We will notify users of significant changes through:</p>
+                <ul>
+                    <li>In-app notifications</li>
+                    <li>Email notifications (if provided)</li>
+                    <li>App store update descriptions</li>
+                    <li>Website announcements</li>
+                </ul>
+            </section>
+
+            <section id="governing-law">
+                <h2>13. Governing Law and Dispute Resolution</h2>
+                
+                <h3>13.1 Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to conflict of law principles.</p>
+
+                <h3>13.2 Dispute Resolution</h3>
+                <ul>
+                    <li>Initial disputes should be addressed through our customer support</li>
+                    <li>Mediation may be pursued for unresolved issues</li>
+                    <li>Litigation, if necessary, shall be conducted in appropriate courts</li>
+                    <li>Users may have rights under consumer protection laws</li>
+                </ul>
+
+                <h3>13.3 Class Action Waiver</h3>
+                <p>Where permitted by law, disputes must be resolved individually and not as part of a class action lawsuit.</p>
+            </section>
+
+            <section id="accessibility">
+                <h2>14. Accessibility and Compliance</h2>
+                
+                <h3>14.1 Accessibility</h3>
+                <p>We strive to make the App accessible to users with disabilities and welcome feedback on accessibility improvements.</p>
+
+                <h3>14.2 Age Requirements</h3>
+                <ul>
+                    <li>Users must be at least 13 years old to use the App</li>
+                    <li>Users under 18 require parental consent where legally required</li>
+                    <li>We do not knowingly collect data from children under 13</li>
+                </ul>
+
+                <h3>14.3 Compliance</h3>
+                <p>The App complies with applicable laws and regulations, including:</p>
+                <ul>
+                    <li>Data protection regulations (GDPR, CCPA)</li>
+                    <li>Educational technology standards</li>
+                    <li>Mobile app store guidelines</li>
+                    <li>Advertising and privacy standards</li>
+                </ul>
+            </section>
+
+            <section id="support">
+                <h2>15. Support and Contact Information</h2>
+                
+                <h3>15.1 Customer Support</h3>
+                <p>For questions, issues, or support requests:</p>
+                <ul>
+                    <li><strong>Email:</strong> support@abacusacademy.app</li>
+                    <li><strong>In-App Support:</strong> Use the support feature within the App</li>
+                    <li><strong>Response Time:</strong> We aim to respond within 48 hours</li>
+                </ul>
+
+                <h3>15.2 Feedback and Suggestions</h3>
+                <p>We welcome feedback to improve the App:</p>
+                <ul>
+                    <li>Feature requests and suggestions</li>
+                    <li>Bug reports and technical issues</li>
+                    <li>Content accuracy corrections</li>
+                    <li>User experience improvements</li>
+                </ul>
+
+                <h3>15.3 Legal Notices</h3>
+                <p>For legal matters, compliance issues, or Terms-related questions:</p>
+                <ul>
+                    <li><strong>Email:</strong> legal@abacusacademy.app</li>
+                    <li><strong>Address:</strong> [Your Business Address]</li>
+                </ul>
+            </section>
+
+            <section id="miscellaneous">
+                <h2>16. Miscellaneous</h2>
+                
+                <h3>16.1 Entire Agreement</h3>
+                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and Abacus Academy regarding use of the App.</p>
+
+                <h3>16.2 Severability</h3>
+                <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+                <h3>16.3 Waiver</h3>
+                <p>No waiver of any term or condition shall be deemed a continuing waiver of such term or any other term.</p>
+
+                <h3>16.4 Assignment</h3>
+                <p>We may assign our rights and obligations under these Terms without your consent. You may not assign your rights without our written consent.</p>
+
+                <h3>16.5 Survival</h3>
+                <p>Provisions that by their nature should survive termination shall survive, including intellectual property, indemnification, and limitation of liability clauses.</p>
+            </section>
+
+            <section id="acknowledgment">
+                <h2>17. Acknowledgment</h2>
+                <div class="highlight-section">
+                    <p><strong>BY USING THE ABACUS ACADEMY APP, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS OF SERVICE.</strong></p>
+                </div>
+                
+                <hr>
+                
+                <div class="terms-meta">
+                    <p><strong>Document Version:</strong> 1.0</p>
+                    <p><strong>Effective Date:</strong> August 1, 2025</p>
+                    <p><strong>Last Review:</strong> September 1, 2025</p>
+                </div>
+                
+                <div class="disclaimer">
+                    <p><em>This document should be reviewed by qualified legal counsel before implementation. Laws and regulations vary by jurisdiction, and specific legal requirements may apply to your business and users.</em></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>About Abacus Academy</h4>
+                <ul>
+                    <li>Educational Excellence</li>
+                    <li>Comprehensive Test Prep</li>
+                    <li>AI-Powered Learning</li>
+                    <li>Career Guidance</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Exams We Cover</h4>
+                <ul>
+                    <li>SLST Preparation</li>
+                    <li>CTET & TET</li>
+                    <li>NET & SET</li>
+                    <li>GATE Engineering</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Features</h4>
+                <ul>
+                    <li>Mock Tests</li>
+                    <li>Progress Analytics</li>
+                    <li>Leaderboards</li>
+                    <li>Study Materials</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="delete-account.html">Delete Account</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Abacus Academy. All rights reserved. | Master Your Future with Confidence</p>
+        </div>
+    </footer>
+</body>
+</html>
